@@ -1,0 +1,9 @@
+Build.PL
+Makefile.PL
+META.yml
+Changes
+MANIFEST
+README
+sample
+t/parse.t
+lib/Parse/Debian/Packages.pm
