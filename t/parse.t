@@ -9,5 +9,4 @@ isa_ok( $parser, "Parse::Debian::Packages" );
 my %first = $parser->next;
 ok( %first, "fetched one" );
 is( $first{Version}, "0.8.1-10", "parsed version" );
-use YAML;
-print Dump \%first;
+
