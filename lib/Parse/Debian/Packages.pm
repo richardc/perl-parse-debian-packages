@@ -29,6 +29,17 @@ sub next {
     return %parsed;
 }
 
+sub as_hash {
+    my $class = shift;
+    my $parser = $class->new(@_);
+    my %hash;
+
+    while (my %package = $parser->next) {
+        $hash{ $package{Package} } = \%package;
+    }
+    return \%hash;
+}
+
 1;
 
 
@@ -59,9 +70,23 @@ will return the next package found in the file.
 For laziness, we take a filehandle in to the constructor.  Please open
 the file for us.
 
+=head1 METHODS
+
+=head2 new( $filehandle )
+
+=head2 next
+
+Iterate to the next package in the file, returns either a hash
+containing a package description, or false at end of file.
+
+=head2 as_hash( $filehandle )
+
+Return all the packages from a filehandle as a hash of hashes.
+
 =head1 AUTHOR
 
-Richard Clamp <richardc@unixbeard.net>
+Richard Clamp <richardc@unixbeard.net> with as_hash implementation by
+Thomas Klausner.
 
 =head1 COPYRIGHT
 
