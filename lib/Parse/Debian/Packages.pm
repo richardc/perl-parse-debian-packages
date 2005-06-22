@@ -1,6 +1,6 @@
 use strict;
 package Parse::Debian::Packages;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my $class = shift;
@@ -16,7 +16,7 @@ sub next {
     my %parsed;
     while (<$fh>) {
         last if /^$/;
-        if (my ($key, $value) = m/^(.*): (.*)/) {
+        if (my ($key, $value) = m/^(.*?): (.*)/) {
             $parsed{$key} = $value;
         }
         else {

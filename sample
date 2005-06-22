@@ -5,6 +5,7 @@ Installed-Size: 148
 Maintainer: Stephen Stafford <bagpuss@debian.org>
 Architecture: i386
 Version: 0.8.1-10
+Broken: in: Parse::Debian::Packages 0.01
 Depends: libc6 (>= 2.3.1-1), xaw3dg (>= 1.5-6), xlibs (>> 4.1.0)
 Filename: pool/main/3/3dchess/3dchess_0.8.1-10_i386.deb
 Size: 31396
