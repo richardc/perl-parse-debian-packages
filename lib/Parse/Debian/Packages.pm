@@ -16,7 +16,7 @@ sub next {
     my %parsed;
     while (<$fh>) {
         last if /^$/;
-        if (my ($key, $value) = m/^(.*?): (.*)/) {
+        if (my ($key, $value) = m/^(\S+): (.*)/) {
             $parsed{$key} = $value;
         }
         else {
