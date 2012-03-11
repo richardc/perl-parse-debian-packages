@@ -1,6 +1,6 @@
 use strict;
 package Parse::Debian::Packages;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my $class = shift;
@@ -90,7 +90,7 @@ Thomas Klausner.
 
 =head1 COPYRIGHT
 
-Copyright (C) 2003 Richard Clamp.  All Rights Reserved.
+Copyright (C) 2003,2005,2012 Richard Clamp.  All Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

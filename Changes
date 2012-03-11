@@ -1,4 +1,4 @@
-HEAD
+0.03 Sunday 11th March, 2012
         Make the regex (\S+): as suggested by debian 
         people (RT #14329, #13251)
 
